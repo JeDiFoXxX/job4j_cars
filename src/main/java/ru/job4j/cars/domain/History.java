@@ -10,7 +10,6 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "history")
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-@AllArgsConstructor
 @Getter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class History {
@@ -25,4 +24,9 @@ public class History {
 
     @PastOrPresent
     private LocalDate endAt;
+
+    public History(LocalDate startAt, LocalDate endAt) {
+        this.startAt = startAt;
+        this.endAt = endAt;
+    }
 }

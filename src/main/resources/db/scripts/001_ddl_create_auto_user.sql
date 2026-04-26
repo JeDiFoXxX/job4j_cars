@@ -1,3 +1,5 @@
+--liquibase formatted sql
+--changeset Jedifox:v.1
 CREATE TABLE IF NOT EXISTS auto_user (
     id BIGSERIAL PRIMARY KEY,
     login VARCHAR(50) NOT NULL,

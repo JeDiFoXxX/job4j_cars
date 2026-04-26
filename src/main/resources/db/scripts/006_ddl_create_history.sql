@@ -1,3 +1,5 @@
+--liquibase formatted sql
+--changeset Jedifox:v.1
 CREATE TABLE IF NOT EXISTS history (
     id BIGSERIAL PRIMARY KEY,
     start_at DATE NOT NULL,

@@ -1,3 +1,5 @@
+--liquibase formatted sql
+--changeset Jedifox:v.1
 CREATE TABLE IF NOT EXISTS posts (
     id BIGSERIAL PRIMARY KEY,
     auto_user_id BIGINT NOT NULL REFERENCES auto_user(id) ON DELETE CASCADE,

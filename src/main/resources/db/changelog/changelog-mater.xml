@@ -12,5 +12,6 @@
     <include file="db/scripts/002_ddl_create_posts.sql" relativeToChangelogFile="false"/>
     <include file="db/scripts/006_ddl_create_history.sql" relativeToChangelogFile="false"/>
     <include file="db/scripts/007_ddl_create_history_owners.sql" relativeToChangelogFile="false"/>
+    <include file="db/scripts/008_ddl_create_photos.sql" relativeToChangelogFile="false"/>
 
 </databaseChangeLog>

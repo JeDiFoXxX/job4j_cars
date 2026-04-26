@@ -7,7 +7,6 @@ import lombok.*;
 @Entity
 @Table(name = "auto_user")
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-@AllArgsConstructor
 @Getter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class User {
@@ -22,4 +21,9 @@ public class User {
     @NotBlank
     @Setter
     private String password;
+
+    public User(String login, String password) {
+        this.login = login;
+        this.password = password;
+    }
 }

@@ -11,7 +11,6 @@ import java.util.Set;
 @Entity
 @Table(name = "cars")
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-@AllArgsConstructor
 @Getter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Car {
@@ -32,11 +31,17 @@ public class Car {
     @NotBlank
     private String name;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "history_owners",
             joinColumns = @JoinColumn(name = "car_id"),
             inverseJoinColumns = @JoinColumn(name = "owner_id")
     )
     private Set<Owner> owners = new HashSet<>();
+
+    public Car(Engine engine, Owner owner, String name) {
+        this.engine = engine;
+        this.owner = owner;
+        this.name = name;
+    }
 }

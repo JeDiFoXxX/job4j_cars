@@ -8,7 +8,6 @@ import lombok.*;
 @Entity
 @Table(name = "owners")
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-@AllArgsConstructor
 @Getter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Owner {
@@ -24,4 +23,9 @@ public class Owner {
 
     @NotBlank
     private String name;
+
+    public Owner(User user, String name) {
+        this.user = user;
+        this.name = name;
+    }
 }
